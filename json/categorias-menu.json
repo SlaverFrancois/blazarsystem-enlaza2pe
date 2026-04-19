@@ -1,0 +1,101 @@
+[
+  {
+    "group": "Servicios del Hogar",
+    "items": [
+      "Electricista",
+      "Gasfitero",
+      "Albañil",
+      "Pintor",
+      "Carpintero",
+      "Soldador",
+      "Cerrajero",
+      "Drywall",
+      "Jardinero",
+      "Limpieza",
+      "Mudanza",
+      "Tapicero"
+    ]
+  },
+  {
+    "group": "Comercio y Alimentos",
+    "items": [
+      "Restaurante",
+      "Pollos a la brasa",
+      "Panadería/Pastelería",
+      "Abarrotes"
+    ]
+  },
+  {
+    "group": "Belleza y Bienestar",
+    "items": [
+      "Spa",
+      "Peluquería",
+      "Manicurista",
+      "Pedicurista",
+      "Gimnasio"
+    ]
+  },
+  {
+    "group": "Técnicos y Reparaciones",
+    "items": [
+      "Técnico electrónico",
+      "Mecánico"
+    ]
+  },
+  {
+    "group": "Inmobiliaria y Clasificados",
+    "items": [
+      "Alquileres",
+      "Se vende",
+      "Te Compro",
+      "Búsqueda-Recompensas"
+    ]
+  },
+    {
+    "group": "Retail y Productos",
+    "items": [
+      "Ropa",
+      "Accesorios",
+      "Juguetes",
+      "Plantas",
+      "Artesanías",
+      "Gas"
+    ]
+  },
+    {
+    "group": "Salud y Cuidado",
+    "items": [
+      "Doctor",
+      "Enfermero",
+      "Psicólogo",
+      "Policlínico",
+      "Laboratorio",
+      "Cuidadoras"
+    ]
+  },
+  {
+    "group": "Profesionales",
+    "items": [
+      "Abogado",
+      "Notario",
+      "Ingeniero",
+      "Arquitecto",
+      "Contador",
+      "Profesor",
+      "Diseñadores"
+    ]
+  },
+  {
+    "group": "Eventos y Entretenimiento",
+    "items": [
+      "Animador de show"
+    ]
+  },
+  {
+    "group": "Mascotas",
+    "items": [
+      "Veterinario",
+      "Paseador de perros"
+    ]
+  }
+]
