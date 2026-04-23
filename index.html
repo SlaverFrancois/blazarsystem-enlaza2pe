@@ -80,7 +80,7 @@
 		</div>
 	</nav>
 
-	<section class="site-typing bg-light">
+	<section class="site-typing bg-light mb-4">
 		<div class="container">
 			<div class="text">
 				<h5><span id="typing"></span> carmelinos, a un sólo clic</h5>
@@ -89,13 +89,14 @@
 	</section>
 
 
+	<h5 id="titulo-resultados" class="text-center mt-5 mb-5"></h5>
 
 	<!-- Contenedores dinamicos -->
 
-	<div class="section search-result-wrap">
+	<div class="posts-entry posts-entry-sm">
 		<div class="container">
 			<div class="row posts-entry">
-				<div class="col-lg-2"  id="tipo1"></div>
+				<div class="col-lg-2" id="tipo1"></div>
 			</div>
 		</div>
 	</div>
@@ -106,7 +107,7 @@
 		</div>
 	</div>
 
-	<div class="section posts-entry">
+	<div class="posts-entry posts-entry-sm">
 		<div class="container">
 			<div class="row g-3">
 				<div class="col-md-12">
@@ -117,26 +118,39 @@
 		</div>
 	</div>
 
-	<div class="section posts-entry">
+	<div class="posts-entry posts-entry-sm">
 		<div class="container">
 			<div class="row" id="tipo4"></div>
 		</div>
 	</div>
 
- 	<div class="posts-entry  posts-entry-sm">
+	<div class="posts-entry posts-entry-sm">
 		<div class="container">
 			<div class="row" id="tipo5"></div>
 		</div>
 	</div>
 	<!-- End contenedores dinamicos -->
 
+	<!--Overlay flotante-->
+	<div id="visor-full" class="visor-full">
+		<div class="visor-header">
+			<span>Vista previa del anuncio</span>
+			<div>
+				<button class="btn-ios btn-expand" onclick="ampliarVista()">⤢ AMPLIAR</button>
+				<button class="btn-ios btn-close" onclick="cerrarVista()">✕ CERRAR</button>
+			</div>
+		</div>
+
+		<iframe id="visor-iframe" loading="lazy"></iframe>
+	</div>
+	<!--End Overlay flotante-->
 
 	<footer class="site-footer">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-4">
 					<div class="widget">
-						<h3 class="mb-4">About</h3>
+						<h3 class="mb-4">Sobre Nosotros</h3>
 						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
 							there live the blind texts.</p>
 					</div> <!-- /.widget -->
@@ -221,13 +235,6 @@
 
 			<div class="row mt-5">
 				<div class="col-12 text-center">
-					<!-- 
-              **==========
-              NOTE: 
-              Please don't remove this copyright link unless you buy the license here https://untree.co/license/  
-              **==========
-            -->
-
 					<p>Copyright &copy;
 						<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash;
 						Designed with love by <a href="https://untree.co">Untree.co</a> Distributed by <a
@@ -264,6 +271,8 @@
 	<script src="js/enlaza2-typing-categorias.js"></script>
 	<script src="js/enlaza2-buscador.js"></script>
 	<script src="js/enlaza2-render.js"></script>
+	<script src="js/enlaza2-modal.js"></script>
+	<script src="js/enlaza2-visor.js"></script>
 
 </body>
 

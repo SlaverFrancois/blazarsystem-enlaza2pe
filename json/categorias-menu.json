@@ -1,7 +1,7 @@
 [
   {
-    "group": "Servicios del Hogar",
-    "items": [
+    "categoria": "Servicios del Hogar y construcción",
+    "subcategory": [
       "Electricista",
       "Gasfitero",
       "Albañil",
@@ -17,8 +17,8 @@
     ]
   },
   {
-    "group": "Comercio y Alimentos",
-    "items": [
+    "categoria": "Comercio y Alimentos",
+    "subcategory": [
       "Restaurante",
       "Pollos a la brasa",
       "Panadería/Pastelería",
@@ -26,8 +26,8 @@
     ]
   },
   {
-    "group": "Belleza y Bienestar",
-    "items": [
+    "categoria": "Belleza y Bienestar",
+    "subcategory": [
       "Spa",
       "Peluquería",
       "Manicurista",
@@ -36,15 +36,15 @@
     ]
   },
   {
-    "group": "Técnicos y Reparaciones",
-    "items": [
+    "categoria": "Técnicos y Reparaciones",
+    "subcategory": [
       "Técnico electrónico",
       "Mecánico"
     ]
   },
   {
-    "group": "Inmobiliaria y Clasificados",
-    "items": [
+    "categoria": "Inmobiliaria y Clasificados",
+    "subcategory": [
       "Alquileres",
       "Se vende",
       "Te Compro",
@@ -52,8 +52,8 @@
     ]
   },
     {
-    "group": "Retail y Productos",
-    "items": [
+    "categoria": "Retail y Productos",
+    "subcategory": [
       "Ropa",
       "Accesorios",
       "Juguetes",
@@ -63,8 +63,8 @@
     ]
   },
     {
-    "group": "Salud y Cuidado",
-    "items": [
+    "categoria": "Salud y Cuidado",
+    "subcategory": [
       "Doctor",
       "Enfermero",
       "Psicólogo",
@@ -74,26 +74,34 @@
     ]
   },
   {
-    "group": "Profesionales",
-    "items": [
+    "categoria": "Profesionales",
+    "subcategory": [
       "Abogado",
       "Notario",
       "Ingeniero",
       "Arquitecto",
       "Contador",
-      "Profesor",
       "Diseñadores"
     ]
   },
   {
-    "group": "Eventos y Entretenimiento",
-    "items": [
+    "categoria": "Educación",
+    "subcategory": [
+      "Academia pre-uni",
+      "Profesor Particular",
+      "Formador laboral",
+      "Profesor"
+    ]
+  },
+  {
+    "categoria": "Eventos y Entretenimiento",
+    "subcategory": [
       "Animador de show"
     ]
   },
   {
-    "group": "Mascotas",
-    "items": [
+    "categoria": "Mascotas",
+    "subcategory": [
       "Veterinario",
       "Paseador de perros"
     ]
