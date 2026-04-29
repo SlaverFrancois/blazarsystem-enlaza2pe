@@ -1,5 +1,4 @@
 function renderAnuncios(lista) {
-  // limpiar
   for (let i = 1; i <= 5; i++) {
     document.getElementById("tipo" + i).innerHTML = "";
   }
@@ -23,6 +22,8 @@ function renderAnuncios(lista) {
         break;
     }
   });
+
+  actualizarCTA(lista.length); // 🔥 AQUÍ
 }
 
 /*DISEÑO 1 (especialista sin tarjeta)*/

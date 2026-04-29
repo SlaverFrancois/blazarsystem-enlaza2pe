@@ -54,15 +54,24 @@
 				<div class="site-navigation">
 					<div class="row g-0 align-items-center">
 						<div class="col-2">
-							<a href="index.html" class="logo m-0 float-start">
-								<marquee behavior="scroll" direction="left" scrollamount="3" loop="infinite">Enlaza2.pe
-								</marquee>
+							<a href="index.html" class="logo m-0 float-start"><a href="index.html"
+									class="logo m-0 float-start">
+
+									<!-- Desktop -->
+									<span class="logo-desktop">Enlaza2.pe</span>
+
+									<!-- Mobile -->
+									<marquee class="logo-mobile" behavior="scroll" direction="left" scrollamount="3">
+										Enlaza2.pe
+									</marquee>
+
+								</a>
 							</a>
 						</div>
 						<div class="col-8 text-center">
 							<form action="#" class="search-form d-inline-block">
 								<input id="search" type="text" class="form-control"
-									placeholder="Escribe lo que buscas" />
+									placeholder="Escriba: gasfitero, electricista, carpintero" />
 								<span class="bi-search"></span>
 								<div id="suggestions" class="suggestions-box"></div>
 							</form>
@@ -83,7 +92,7 @@
 	<section class="site-typing bg-light mb-4">
 		<div class="container">
 			<div class="text">
-				<h5><span id="typing"></span> carmelinos, a un sólo clic</h5>
+				<h5><span id="typing"></span> carmelinos</h5>
 			</div>
 		</div>
 	</section>
@@ -92,6 +101,12 @@
 	<h5 id="titulo-resultados" class="text-center mt-5 mb-5"></h5>
 
 	<!-- Contenedores dinamicos -->
+	<!--tipoanuncio 1: plantilla para especialistas sin tarjeta
+		tipoanuncio 2: plantilla para especialistas con tarjeta (horizontal)
+		tipoanuncio 3: plantilla para clasificados sin imagen (Sólo TEXTO ---- compra/venta/alquiler: titulo, precio, zona, descripcion, fecha
+		tipoanuncio 4: plantilla para clasificados con imagen
+		tipoanuncio 5: plantilla para emprendimiento grande (imagen horizontal)
+		tipoanuncio 6: plantilla para emprendimiento grande (imagen vertical)-->
 
 	<div class="posts-entry posts-entry-sm">
 		<div class="container">
@@ -131,6 +146,18 @@
 	</div>
 	<!-- End contenedores dinamicos -->
 
+
+	<div id="cta-publicar" class="alert alert-warning text-center mt-4">
+		<h5>¿Necesitas publicar tu anuncio o servicio?</h5>
+		<p>
+			Actualmente estamos buscando anunciantes.<br>
+			Si conoces uno o eres tú, publica GRATIS aquí 👇
+		</p>
+		<a href="formulario.html" class="btn btn-primary">
+			Publicar anuncio gratis
+		</a>
+	</div>
+
 	<!--Overlay flotante-->
 	<div id="visor-full" class="visor-full">
 		<div class="visor-header">
@@ -145,106 +172,29 @@
 	</div>
 	<!--End Overlay flotante-->
 
+
 	<footer class="site-footer">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-4">
-					<div class="widget">
-						<h3 class="mb-4">Sobre Nosotros</h3>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-							there live the blind texts.</p>
-					</div> <!-- /.widget -->
-					<div class="widget">
-						<h3>Social</h3>
-						<ul class="list-unstyled social">
-							<li><a href="#"><span class="icon-instagram"></span></a></li>
-							<li><a href="#"><span class="icon-twitter"></span></a></li>
-							<li><a href="#"><span class="icon-facebook"></span></a></li>
-							<li><a href="#"><span class="icon-linkedin"></span></a></li>
-							<li><a href="#"><span class="icon-pinterest"></span></a></li>
-							<li><a href="#"><span class="icon-dribbble"></span></a></li>
-						</ul>
-					</div> <!-- /.widget -->
-				</div> <!-- /.col-lg-4 -->
-				<div class="col-lg-4 ps-lg-5">
-					<div class="widget">
-						<h3 class="mb-4">Company</h3>
-						<ul class="list-unstyled float-start links">
-							<li><a href="#">About us</a></li>
-							<li><a href="#">Services</a></li>
-							<li><a href="#">Vision</a></li>
-							<li><a href="#">Mission</a></li>
-							<li><a href="#">Terms</a></li>
-							<li><a href="#">Privacy</a></li>
-						</ul>
-						<ul class="list-unstyled float-start links">
-							<li><a href="#">Partners</a></li>
-							<li><a href="#">Business</a></li>
-							<li><a href="#">Careers</a></li>
-							<li><a href="#">Blog</a></li>
-							<li><a href="#">FAQ</a></li>
-							<li><a href="#">Creative</a></li>
-						</ul>
-					</div> <!-- /.widget -->
-				</div> <!-- /.col-lg-4 -->
-				<div class="col-lg-4">
-					<div class="widget">
-						<h3 class="mb-4">Recent Post Entry</h3>
-						<div class="post-entry-footer">
-							<ul>
-								<li>
-									<a href="">
-										<img src="images/img_1_sq.jpg" alt="Image placeholder" class="me-4 rounded">
-										<div class="text">
-											<h4>There’s a Cool New Way for Men to Wear Socks and Sandals</h4>
-											<div class="post-meta">
-												<span class="mr-2">March 15, 2018 </span>
-											</div>
-										</div>
-									</a>
-								</li>
-								<li>
-									<a href="">
-										<img src="images/img_2_sq.jpg" alt="Image placeholder" class="me-4 rounded">
-										<div class="text">
-											<h4>There’s a Cool New Way for Men to Wear Socks and Sandals</h4>
-											<div class="post-meta">
-												<span class="mr-2">March 15, 2018 </span>
-											</div>
-										</div>
-									</a>
-								</li>
-								<li>
-									<a href="">
-										<img src="images/img_3_sq.jpg" alt="Image placeholder" class="me-4 rounded">
-										<div class="text">
-											<h4>There’s a Cool New Way for Men to Wear Socks and Sandals</h4>
-											<div class="post-meta">
-												<span class="mr-2">March 15, 2018 </span>
-											</div>
-										</div>
-									</a>
-								</li>
-							</ul>
-						</div>
 
-
-					</div> <!-- /.widget -->
-				</div> <!-- /.col-lg-4 -->
-			</div> <!-- /.row -->
-
-			<div class="row mt-5">
 				<div class="col-12 text-center">
-					<p>Copyright &copy;
-						<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash;
-						Designed with love by <a href="https://untree.co">Untree.co</a> Distributed by <a
-							href="https://themewagon.com">ThemeWagon</a>
-						<!-- License information: https://untree.co/license/ -->
+<p class="blz-footer-links">
+						<a href="javascript:void(0)" onclick="abrirTerms()">Términos y Condiciones</a>
 					</p>
+					<p>
+						©
+						<script>document.write(new Date().getFullYear());</script>
+						<strong>enlaza2.pe</strong> | Plataforma de servicios en Carmen de la Legua | Desarrollado por
+						<a href="https://blazarsystem.pe" target="_blank">Blazar System</a>
+					</p>
+
+					<!-- LINKS LEGALES -->
+					
 				</div>
+
 			</div>
-		</div> <!-- /.container -->
-	</footer> <!-- /.site-footer -->
+		</div>
+	</footer>
 
 	<!-- Preloader -->
 	<div id="overlayer"></div>
@@ -253,6 +203,25 @@
 			<span class="visually-hidden">Loading...</span>
 		</div>
 	</div>
+
+	<!--terminos modal-->
+
+	<div class="blz-terms-overlay" id="blzTerms" style="display:none;">
+		<div class="blz-terms-modal">
+
+			<div class="blz-terms-header">
+				<div class="blz-terms-title">Términos y Condiciones</div>
+				<div class="blz-terms-close" onclick="cerrarTerms()">✕</div>
+			</div>
+
+			<div class="blz-terms-body" id="blzTermsContent">
+				<!-- AQUÍ SE CARGA terminos.html -->
+				<p>Cargando términos...</p>
+			</div>
+
+		</div>
+	</div>
+
 
 
 	<script src="js/bootstrap.bundle.min.js"></script>
@@ -273,6 +242,7 @@
 	<script src="js/enlaza2-render.js"></script>
 	<script src="js/enlaza2-modal.js"></script>
 	<script src="js/enlaza2-visor.js"></script>
+	<script src="js/enlaza2-blz-terms.js"></script>
 
 </body>
 

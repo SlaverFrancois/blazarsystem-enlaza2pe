@@ -1,0 +1,384 @@
+<!-- /*
+* Template Name: Blogy
+* Template Author: Untree.co
+* Template URI: https://untree.co/
+* License: https://creativecommons.org/licenses/by/3.0/
+*/ -->
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Untree.co">
+	<link rel="shortcut icon" href="favicon.png">
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="bootstrap, bootstrap5" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+	<link rel="stylesheet" href="fonts/icomoon/style.css">
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+	<link rel="stylesheet" href="css/tiny-slider.css">
+	<link rel="stylesheet" href="css/aos.css">
+	<link rel="stylesheet" href="css/glightbox.min.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<link rel="stylesheet" href="css/flatpickr.min.css">
+
+
+	<title>Blogy &mdash; Free Bootstrap 5 Website Template by Untree.co</title>
+</head>
+
+<body>
+
+	<div class="site-mobile-menu site-navbar-target">
+		<div class="site-mobile-menu-header">
+			<div class="site-mobile-menu-close">
+				<span class="icofont-close js-menu-toggle"></span>
+			</div>
+		</div>
+		<div class="site-mobile-menu-body"></div>
+	</div>
+
+	<nav class="site-nav">
+		<div class="container">
+			<div class="menu-bg-wrap">
+				<div class="site-navigation">
+					<div class="row g-0 align-items-center">
+						<div class="col-2">
+							<a href="index.html" class="logo m-0 float-start"><a href="index.html"
+									class="logo m-0 float-start">
+
+									<!-- Desktop -->
+									<span class="logo-desktop">Enlaza2.pe</span>
+
+									<!-- Mobile -->
+									<marquee class="logo-mobile" behavior="scroll" direction="left" scrollamount="3">
+										Enlaza2.pe
+									</marquee>
+
+								</a>
+							</a>
+						</div>
+						<div class="col-8 text-center">
+							<form action="#" class="search-form d-inline-block">
+								<input id="search" type="text" class="form-control"
+									placeholder="Escriba: gasfitero, electricista, carpintero" />
+								<span class="bi-search"></span>
+								<div id="suggestions" class="suggestions-box"></div>
+							</form>
+						</div>
+
+						<div class="col-2">
+							<a class="float-end site-menu-toggle js-menu-toggle d-inline-block">
+								Categorías
+							</a>
+							<ul id="menu-categorias" class="js-clone-nav"></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+
+	<section class="section mt-5 mb-5">
+		<div class="container">
+			<div class="row">
+
+				<div class="col-lg-4 mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+
+					<div class="blz-anunciante-box sec-features p-3">
+
+						<h4 class="blz-anunciante-title text-center">
+							📢 Publica tu servicio gratis y consigue más clientes
+						</h4>
+
+						<p class="blz-anunciante-sub">
+							Completa tus datos y nosotros te ayudamos a publicar tu anuncio.
+							En menos de 24 horas ya podrás aparecer en la plataforma.
+						</p>
+
+						<ul class="blz-anunciante-list">
+							<li>Escribe qué trabajos haces (ej: arreglos, instalaciones, etc).</li>
+							<li>Indica en qué zona trabajas.</li>
+							<li>No pongas cosas que no puedes demostrar.</li>
+							<li>Cuenta tu experiencia o trabajos que ya hiciste.</li>
+						</ul>
+
+						<div class="blz-anunciante-warning">
+							⚠️ Si la información está incompleta o es falsa, no se publicará.
+						</div>
+
+						<div class="blz-anunciante-link text-center">
+							<a href="javascript:void(0)" onclick="abrirYIrANormas()">
+								Ver reglas antes de publicar
+							</a>
+						</div>
+
+						<div class="blz-anunciante-extra">
+							💡 Mientras más claro escribas, más clientes te llamarán.
+						</div>
+
+					</div>
+				</div>
+
+				<!-- FORMULARIO -->
+				<div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+					<form id="formAnuncio">
+						<!--paso 1-->
+						<div id="step1">
+							<div class="row border-bottom">
+								<div class="col-lg-6 col-md-12 col-sm-12 mb-3">
+									<input type="text" class="form-control" placeholder="Nombre" required>
+								</div>
+								<div class="col-lg-6 col-md-12 col-sm-12 mb-3">
+									<input type="tel" class="form-control" placeholder="Teléfono o Correo" required>
+								</div>
+								<div class="col-lg-6 col-md-12 col-sm-12 mb-3">
+									<input type="text" class="form-control" placeholder="Dirección fija o aproximada"
+										required>
+								</div>
+								<div class="col-lg-6 col-md-12 col-sm-12 mb-3">
+									<input type="text" class="form-control"
+										placeholder="Categoría de servicios (Ej: gasfitería, electricidad)" required>
+								</div>
+								<div class="col-12 mb-3">
+									<textarea cols="30" rows="6" class="form-control"
+										placeholder="¿Qué trabajos realizas?. Ej: arreglo fugas, hago instalaciones electricas, instalo drywall, hago limpieza, cuidado de personas, etc."
+										required></textarea>
+								</div>
+								<!-- BLOQUE LEGAL -->
+								<div class="col-lg-12 mb-4 blz-form-legal">
+									<ul class="blz-form-list">
+										<li>Tu información es privada y no se comparte con terceros.</li>
+										<li>Tu solicitud será evaluada antes de ser publicada.</li>
+										<li>Te contactaremos por WhatsApp para refinar tu anuncio.</li>
+									</ul>
+									<div class="blz-form-check">
+										<input type="checkbox" id="acceptTerms" required>
+										<label for="acceptTerms">
+											Acepto la publicación de mis datos conforme a los términos de enlaza2.pe
+										</label>
+									</div>
+									<div class="blz-form-link">
+										<a href="javascript:void(0)" onclick="abrirYIrANormas()">
+											Leer términos y políticas (ir a normas de contenido)
+										</a>
+									</div>
+								</div>
+								<div class="col-lg-12 mt-3">
+									<button type="submit" class="btn btn-primary w-100">
+										Publicar anuncio
+									</button>
+								</div>
+							</div>
+						</div>
+						<!--fin paso 1-->
+
+						<!--paso 2-->
+
+						<div id="step2" style="display:none;">
+							<div class="blz-step2-box">
+								<h4>✅ Tu solicitud fue enviada</h4>
+								<p>
+									En breve, <strong>te contactaremos por WhatsApp</strong> para ayudarte a mejorar tu
+									anuncio
+									y hacerlo más atractivo para los usuarios.
+								</p>
+								<div class="blz-step2-info">
+									📌 Ten listo:
+									<ul>
+										<li>Fotos de tus trabajos</li>
+										<li>Videos (opcional)</li>
+										<li>Enlaces de YouTube (si tienes)</li>
+									</ul>
+								</div>
+								<hr>
+								<h5>💳 Mantenimiento del anuncio</h5>
+								<p>
+									Para mantener tu anuncio activo en la plataforma:
+								</p>
+								<ul class="blz-step2-pagos">
+									<li>🔹 Primer mes: <strong>S/ 15</strong></li>
+									<li>🔹 Luego: <strong>S/ 35 cada 3 meses</strong></li>
+								</ul>
+								<p class="blz-step2-extra">
+									Puedes retirarte en cualquier momento. El pago corresponde al mantenimiento
+									y visibilidad de tu anuncio en enlaza2.pe.
+								</p>
+								<div class="blz-step2-metodos">
+									💰 Métodos de pago: <strong>Yape / Plin</strong>
+								</div>
+							</div>
+						</div>
+						<!--fin paso 2-->
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<div class="section sec-features">
+		<div class="container">
+			<div class="row g-5">
+
+				<div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+					<div class="feature d-flex">
+						<span class="bi-lightning-charge-fill"></span>
+						<div>
+							<h3>Publica y contacta sin complicaciones</h3>
+							<p>No necesitas registrarte. Publica tu anuncio o contacta proveedores en segundos, sin
+								barreras ni procesos largos.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+					<div class="feature d-flex">
+						<span class="bi-geo-alt-fill"></span>
+						<div>
+							<h3>100% enfocado en Carmen de la Legua</h3>
+							<p>Conectamos necesidades reales del distrito con soluciones cercanas, mejorando la calidad
+								de vida del carmelino.</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-12 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+					<div class="feature d-flex">
+						<span class="bi-graph-up-arrow"></span>
+						<div>
+							<h3>Impulsa tu crecimiento con tecnología accesible</h3>
+							<p>Promociona tu perfil profesional con herramientas simples, económicas y diseñadas para
+								emprendedores locales.</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!--
+	<div class="section">
+		<div class="container">
+			<div class="row justify-content-between">
+				<div class="col-lg-7 mb-4 mb-lg-0">
+					<img src="images/img_7_sq.jpg" alt="Image" class="img-fluid rounded
+					">
+				</div>
+				<div class="col-lg-4 ps-lg-2">
+					<div class="mb-5">
+						<h2 class="text-black h4">Publishing platform for professional bloggers</h2>
+						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+							there live the blind texts.</p>
+					</div>
+					<div class="d-flex mb-3 service-alt">
+						<div>
+							<span class="bi-wallet-fill me-4"></span>
+						</div>
+						<div>
+							<h3>Building your blog</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+								there live the blind texts.</p>
+						</div>
+					</div>
+
+					<div class="d-flex mb-3 service-alt">
+						<div>
+							<span class="bi-pie-chart-fill me-4"></span>
+						</div>
+						<div>
+							<h3>Resources and insights</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+								there live the blind texts.</p>
+						</div>
+					</div>
+
+					<div class="d-flex mb-3 service-alt">
+						<div>
+							<span class="bi-bag-check-fill me-4"></span>
+						</div>
+						<div>
+							<h3>Blog just for you</h3>
+							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+								there live the blind texts.</p>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+-->
+	<footer class="site-footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-12 text-center">
+					<p>
+						©
+						<script>document.write(new Date().getFullYear());</script>
+						<strong>enlaza2.pe</strong> | Plataforma de servicios en Carmen de la Legua
+						— Desarrollado por <a href="https://blazarsystem.pe" target="_blank">Blazar System</a>
+					</p>
+				</div>
+			</div>
+		</div> <!-- /.container -->
+	</footer> <!-- /.site-footer -->
+
+	<!-- Preloader -->
+	<div id="overlayer"></div>
+	<div class="loader">
+		<div class="spinner-border text-primary" role="status">
+			<span class="visually-hidden">Loading...</span>
+		</div>
+	</div>
+
+	<!--terminos modal-->
+
+	<div class="blz-terms-overlay" id="blzTerms" style="display:none;">
+		<div class="blz-terms-modal">
+
+			<div class="blz-terms-header">
+				<div class="blz-terms-title">Términos y Condiciones</div>
+				<div class="blz-terms-close" onclick="cerrarTerms()">✕</div>
+			</div>
+
+			<div class="blz-terms-body" id="blzTermsContent">
+				<!-- AQUÍ SE CARGA terminos.html -->
+				<p>Cargando términos...</p>
+			</div>
+
+		</div>
+	</div>
+
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/tiny-slider.js"></script>
+
+	<script src="js/flatpickr.min.js"></script>
+
+
+	<script src="js/aos.js"></script>
+	<script src="js/glightbox.min.js"></script>
+	<script src="js/navbar.js"></script>
+	<script src="js/counter.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="js/enlaza2-blz-terms.js"></script>
+	<script src="js/enlaza2-multistep-form.js"></script>
+
+
+</body>
+
+</html>

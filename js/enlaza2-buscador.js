@@ -51,22 +51,7 @@ function mostrarSugerencias(lista) {
     box.appendChild(div);
   });
 }
-
-/*
-function filtrarAnuncios(texto) {
-  const resultados = anuncios.filter(a => {
-    return (
-      a.rubro.toLowerCase().includes(texto.toLowerCase()) ||
-      a.subcategory.toLowerCase().includes(texto.toLowerCase()) ||
-      a.especiality.toLowerCase().includes(texto.toLowerCase()) ||
-      a.skills.some(s => s.toLowerCase().includes(texto.toLowerCase()))
-    );
-  });
-
-  renderAnuncios(resultados);
-}*/
-
-
+ 
 function filtrarAnuncios(texto, modo = "general") {
 
   // ocultar título al buscar
@@ -108,7 +93,7 @@ function mostrarAvisoSinResultados(categoria) {
   const contenedor = document.getElementById("tipo2");
 
   contenedor.innerHTML = `
-    <div class="alert alert-warning text-center mt-4">
+  <div class="alert alert-warning text-center mt-4 aviso-sin-resultados">
       <h5>😅 Aún no hay anuncios en "${categoria}"</h5>
       <p>
         Actualmente estamos buscando anunciantes de ${categoria}.<br>
@@ -119,8 +104,7 @@ function mostrarAvisoSinResultados(categoria) {
       </a>
     </div>
   `;
-
-
+  actualizarCTA(0);
 }
 
 
@@ -145,8 +129,34 @@ function mostrarInicio() {
   }
 
   renderAnuncios(destacados);
+  actualizarCTA(destacados.length);
 } 
 
 function limpiarAviso() {
   // opcional si manejas contenedor separado
+}
+
+function hayResultados() {
+  const contenedores = ["tipo1", "tipo2", "tipo3", "tipo4", "tipo5"];
+
+  return contenedores.some(id => {
+    const el = document.getElementById(id);
+    if (!el) return false;
+
+    // 🔥 SOLO contar anuncios reales (no avisos)
+    const anuncios = el.querySelectorAll(".blog-entry, .col-md-6, .col-md-4");
+
+    return anuncios.length > 0;
+  });
+}
+
+function actualizarCTA(cantidadResultados) {
+  const cta = document.getElementById("cta-publicar");
+  if (!cta) return;
+
+  if (cantidadResultados > 0) {
+    cta.style.display = "block";
+  } else {
+    cta.style.display = "none";
+  }
 }
