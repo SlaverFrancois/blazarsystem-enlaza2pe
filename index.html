@@ -94,10 +94,27 @@
 				<p class="blz-typing-sub">
 					Escribe lo que necesitas o elige "ver servicios" para encontrar todos los servicios cerca de ti.
 				</p>
+
+				<!-- 🔥 AQUÍ VA EL CTA -->
+				<div class="blz-cta-inline">
+					<div class="blz-cta-icon">📢</div>
+					<div class="blz-cta-content">
+						<div class="blz-cta-inline-title">
+							¿Ofreces algún servicio?
+						</div> 
+						<a href="formulario.html" class="blz-cta-inline-link">
+							👉Publicar ahora gratis aquí👈
+						</a>
+					</div>
+					<div class="blz-cta-close" onclick="this.parentElement.style.display='none'">✕</div>
+				</div>
+
+
 				<!--  BUSCADOR -->
 				<div class="blz-search-box">
 					<div class="blz-search-wrapper">
-						<input id="search" type="text" class="form-control" placeholder='🔍︎  Escriba: "electricista"' />
+						<input id="search" type="text" class="form-control"
+							placeholder='🔍︎  Escriba: "electricista"' />
 						<div id="suggestions" class="suggestions-box"></div>
 						<!--No usar <form> si no estás enviando nada-->
 					</div>
@@ -126,19 +143,6 @@
 		</div>
 	</div>
 	<!-- End contenedores dinamicos -->
-
-
-	<div id="cta-publicar" class="blz-cta-box text-center mt-4 mb-4">
-		<h5 class="blz-cta-title">
-			📢 Publica tu servicio y consigue clientes hoy
-		</h5>
-		<p class="blz-cta-text">
-			Es rápido, gratis y te ayudamos a crear tu anuncio.
-		</p>
-		<a href="formulario.html" class="blz-cta-btn">
-			Publicar gratis ahora
-		</a>
-	</div>
 
 	<!--Overlay flotante-->
 	<!--	<div id="visor-full" class="visor-full">

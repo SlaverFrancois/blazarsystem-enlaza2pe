@@ -53,8 +53,19 @@ function mostrarNoExiste(texto) {
 
   box.innerHTML = `
     <div class="blz-no-result">
-      ❌ No existe "<strong>${texto}</strong>"<br>
-      <span class="blz-no-link">Sé el primero en ofrecer el servicio 👉 aquí </span>
+
+      <div class="blz-no-title">
+        ❌ No encontramos "<strong>${texto}</strong>"
+      </div>
+
+      <div class="blz-no-cta">
+        👉 Sé el primero en ofrecer este servicio
+      </div>
+
+      <div class="blz-no-btn">
+        Publicar mi servicio
+      </div>
+
     </div>
   `;
 
@@ -147,7 +158,7 @@ function mostrarAvisoSinResultados(categoria) {
 
 function mostrarInicio() {
   const titulo = document.getElementById("titulo-resultados");
-  titulo.textContent = "⚠️ Anuncios destacados";
+  titulo.textContent = "📢Anuncios destacados";
   titulo.style.display = "block"; // mostrar
 
   //  1. destacados primero
@@ -220,7 +231,7 @@ input.addEventListener("focus", () => {
 });
 
 /*mini buscador*/
-
+/*
 function irABuscador() {
   const input = document.getElementById("search");
 
@@ -236,4 +247,21 @@ function irABuscador() {
   setTimeout(() => {
     input.focus();
   }, 400);
+}*/
+
+function irABuscador() {
+  const input = document.getElementById("search");
+  if (!input) return;
+
+  // 🔥 1. activar teclado inmediatamente
+  input.focus();
+
+  // 🔥 2. opcional: seleccionar texto (mejora UX)
+  input.select();
+
+  // 🔥 3. luego hacer scroll suave
+  input.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
 }
