@@ -5,7 +5,7 @@ fetch("json/anuncios.json")
   .then(data => {
     anuncios = data;
 
-    /*inicio -- cargar al inicio*/  
+    /*inicio -- cargar al inicio*/
     mostrarInicio();
     /*fin -- cargar al inicio*/
 
@@ -25,18 +25,54 @@ fetch("json/anuncios.json")
 
     input.addEventListener("input", () => {
       const valor = input.value.toLowerCase();
+      const box = document.getElementById("suggestions");
+
+      // 🔥 SI ESTÁ VACÍO → OCULTAR (incluye la X del móvil)
+      if (valor.trim() === "") {
+        box.style.display = "none";
+        box.innerHTML = "";
+        document.getElementById("suggestions").innerHTML = "";
+        return;
+      }
 
       const sugerencias = lista.filter(p =>
         p.toLowerCase().includes(valor)
       );
 
-      mostrarSugerencias(sugerencias);
+      // 🔥 si NO hay resultados
+      if (sugerencias.length === 0) {
+        mostrarNoExiste(valor);
+      } else {
+        mostrarSugerencias(sugerencias);
+      }
     });
   });
+
+function mostrarNoExiste(texto) {
+  const box = document.getElementById("suggestions");
+
+  box.innerHTML = `
+    <div class="blz-no-result">
+      ❌ No existe "<strong>${texto}</strong>"<br>
+      <span class="blz-no-link">Sé el primero en ofrecer el servicio 👉 aquí </span>
+    </div>
+  `;
+
+  box.onclick = () => {
+    window.location.href = "formulario.html";
+  };
+}
 
 function mostrarSugerencias(lista) {
   const box = document.getElementById("suggestions");
   box.innerHTML = "";
+
+  if (lista.length === 0) {
+    box.style.display = "none";
+    return;
+  }
+
+  box.style.display = "block"; // 🔥 IMPORTANTE
 
   lista.forEach(item => {
     const div = document.createElement("div");
@@ -45,18 +81,18 @@ function mostrarSugerencias(lista) {
     div.onclick = () => {
       document.getElementById("search").value = item;
       filtrarAnuncios(item);
-      box.innerHTML = "";
+      box.style.display = "none"; // 🔥 cerrar al elegir
     };
 
     box.appendChild(div);
   });
 }
- 
+
 function filtrarAnuncios(texto, modo = "general") {
 
   // ocultar título al buscar
   const titulo = document.getElementById("titulo-resultados");
-  titulo.style.display = "none";
+  titulo.style.display = "block";
 
   const t = texto.toLowerCase();
 
@@ -83,24 +119,25 @@ function filtrarAnuncios(texto, modo = "general") {
 
 
 /*Aviso y redireccion a formulario*/
-function mostrarAvisoSinResultados(categoria) { 
+function mostrarAvisoSinResultados(categoria) {
 
-    // limpiar otros diseños
-  for (let i = 1; i <= 5; i++) {
+  // limpiar otros diseños
+  for (let i = 1; i <= 2; i++) {
     document.getElementById("tipo" + i).innerHTML = "";
   }
   //usar plantilla para mostrar anuncio
   const contenedor = document.getElementById("tipo2");
 
   contenedor.innerHTML = `
-  <div class="alert alert-warning text-center mt-4 aviso-sin-resultados">
-      <h5>😅 Aún no hay anuncios en "${categoria}"</h5>
-      <p>
-        Actualmente estamos buscando anunciantes de ${categoria}.<br>
-        Si conoces uno o eres tú, publica GRATIS aquí 👇
+    <div class="blz-cta-box text-center mt-4 mb-4">
+      <h5 class="blz-cta-title">
+        Sé el primero en ofrecer este servicio
+      </h5>
+      <p class="blz-cta-text">
+         y consigue clientes en tu zona.
       </p>
-      <a href="formulario.html" class="btn btn-primary">
-        Publicar anuncio gratis
+      <a href="formulario.html" class="blz-cta-btn">
+        Publicar mi servicio
       </a>
     </div>
   `;
@@ -110,7 +147,7 @@ function mostrarAvisoSinResultados(categoria) {
 
 function mostrarInicio() {
   const titulo = document.getElementById("titulo-resultados");
-  titulo.textContent = "Anuncios destacados";
+  titulo.textContent = "⚠️ Anuncios destacados";
   titulo.style.display = "block"; // mostrar
 
   //  1. destacados primero
@@ -130,14 +167,18 @@ function mostrarInicio() {
 
   renderAnuncios(destacados);
   actualizarCTA(destacados.length);
-} 
+}
 
 function limpiarAviso() {
-  // opcional si manejas contenedor separado
+  const contenedor = document.getElementById("tipo2");
+
+  if (contenedor) {
+    contenedor.innerHTML = "";
+  }
 }
 
 function hayResultados() {
-  const contenedores = ["tipo1", "tipo2", "tipo3", "tipo4", "tipo5"];
+  const contenedores = ["tipo1", "tipo2"];
 
   return contenedores.some(id => {
     const el = document.getElementById(id);
@@ -159,4 +200,40 @@ function actualizarCTA(cantidadResultados) {
   } else {
     cta.style.display = "none";
   }
+}
+
+/*ocultar al hacer click*/
+
+document.addEventListener("click", function (e) {
+  const wrapper = document.querySelector(".blz-search-wrapper");
+  const box = document.getElementById("suggestions");
+
+  if (!wrapper.contains(e.target)) {
+    box.style.display = "none";
+  }
+});
+
+input.addEventListener("focus", () => {
+  if (input.value.trim() !== "") {
+    document.getElementById("suggestions").style.display = "block";
+  }
+});
+
+/*mini buscador*/
+
+function irABuscador() {
+  const input = document.getElementById("search");
+
+  if (!input) return;
+
+  // scroll suave hacia el buscador
+  input.scrollIntoView({
+    behavior: "smooth",
+    block: "center"
+  });
+
+  // esperar a que llegue y activar teclado
+  setTimeout(() => {
+    input.focus();
+  }, 400);
 }

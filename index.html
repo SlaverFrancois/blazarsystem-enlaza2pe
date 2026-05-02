@@ -1,5 +1,5 @@
 <!-- /*
-* Template Name: Blogy
+* Template Name: enlaza2
 * Template Author: Untree.co
 * Template URI: https://untree.co/
 * License: https://creativecommons.org/licenses/by/3.0/
@@ -34,7 +34,7 @@
 	<link rel="stylesheet" href="css/flatpickr.min.css">
 
 
-	<title>Blogy &mdash; Free Bootstrap 5 Website Template by Untree.co</title>
+	<title>enlaza2.pe &mdash; Directorio de servicios carmelinos</title>
 </head>
 
 <body>
@@ -52,61 +52,65 @@
 		<div class="container">
 			<div class="menu-bg-wrap">
 				<div class="site-navigation">
-					<div class="row g-0 align-items-center">
-						<div class="col-2">
-							<a href="index.html" class="logo m-0 float-start"><a href="index.html"
-									class="logo m-0 float-start">
+					<div class="row align-items-center">
+						<div class="col-6">
+							<a href="index.html" class="logo m-0">
+								<!-- Desktop -->
+								<span class="logo-desktop">Enlaza2.pe</span>
 
-									<!-- Desktop -->
-									<span class="logo-desktop">Enlaza2.pe</span>
-
-									<!-- Mobile -->
-									<marquee class="logo-mobile" behavior="scroll" direction="left" scrollamount="3">
-										Enlaza2.pe
-									</marquee>
-
-								</a>
+								<!-- Mobile -->
+								<div class="logo-mobile">
+									Enlaza2.pe
+								</div>
 							</a>
 						</div>
-						<div class="col-8 text-center">
-							<form action="#" class="search-form d-inline-block">
-								<input id="search" type="text" class="form-control"
-									placeholder="Escriba: gasfitero, electricista, carpintero" />
-								<span class="bi-search"></span>
-								<div id="suggestions" class="suggestions-box"></div>
-							</form>
+
+						<!-- 🔍 BUSCADOR MINI -->
+						<div class="col-6 text-end">
+							<div class="blz-nav-search" onclick="irABuscador()">
+								<span class="blz-nav-icon">🔍</span>
+								<span class="blz-nav-text">Buscar...</span>
+							</div>
 						</div>
 
-						<div class="col-2">
-							<a class="float-end site-menu-toggle js-menu-toggle d-inline-block">
-								Categorías
-							</a>
-							<ul id="menu-categorias" class="js-clone-nav"></ul>
-						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</nav>
 
-	<section class="site-typing bg-light mb-4">
+	<!--Menu lateral-->
+	<div>
+		<ul id="menu-categorias" class="js-clone-nav"></ul>
+	</div>
+
+
+	<section class="site-typing mb-2">
 		<div class="container">
-			<div class="text">
-				<h5><span id="typing"></span> carmelinos</h5>
+			<div class="blz-typing-card text-center">
+				<h5 class="blz-typing-title">
+					<span id="typing"></span> en Carmen de la Legua
+				</h5>
+				<p class="blz-typing-sub">
+					Escribe lo que necesitas o elige "ver servicios" para encontrar todos los servicios cerca de ti.
+				</p>
+				<!--  BUSCADOR -->
+				<div class="blz-search-box">
+					<div class="blz-search-wrapper">
+						<input id="search" type="text" class="form-control" placeholder='🔍︎  Escriba: "electricista"' />
+						<div id="suggestions" class="suggestions-box"></div>
+						<!--No usar <form> si no estás enviando nada-->
+					</div>
+
+					<button class="blz-search-btn js-menu-toggle" onclick="abrirCategorias()">
+						🧰 Ver servicios
+					</button>
+				</div>
 			</div>
 		</div>
 	</section>
 
-
-	<h5 id="titulo-resultados" class="text-center mt-5 mb-5"></h5>
-
-	<!-- Contenedores dinamicos -->
-	<!--tipoanuncio 1: plantilla para especialistas sin tarjeta
-		tipoanuncio 2: plantilla para especialistas con tarjeta (horizontal)
-		tipoanuncio 3: plantilla para clasificados sin imagen (Sólo TEXTO ---- compra/venta/alquiler: titulo, precio, zona, descripcion, fecha
-		tipoanuncio 4: plantilla para clasificados con imagen
-		tipoanuncio 5: plantilla para emprendimiento grande (imagen horizontal)
-		tipoanuncio 6: plantilla para emprendimiento grande (imagen vertical)-->
+	<h5 id="titulo-resultados" class="text-center mt-5 mb-5" style="display:none;"></h5>
 
 	<div class="posts-entry posts-entry-sm">
 		<div class="container">
@@ -116,50 +120,28 @@
 		</div>
 	</div>
 
-	<div class="posts-entry posts-entry-sm">
+	<div class="posts-entry">
 		<div class="container">
 			<div class="row" id="tipo2"></div>
-		</div>
-	</div>
-
-	<div class="posts-entry posts-entry-sm">
-		<div class="container">
-			<div class="row g-3">
-				<div class="col-md-12">
-					<div class="row" id="tipo3">
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<div class="posts-entry posts-entry-sm">
-		<div class="container">
-			<div class="row" id="tipo4"></div>
-		</div>
-	</div>
-
-	<div class="posts-entry posts-entry-sm">
-		<div class="container">
-			<div class="row" id="tipo5"></div>
 		</div>
 	</div>
 	<!-- End contenedores dinamicos -->
 
 
-	<div id="cta-publicar" class="alert alert-warning text-center mt-4">
-		<h5>¿Necesitas publicar tu anuncio o servicio?</h5>
-		<p>
-			Actualmente estamos buscando anunciantes.<br>
-			Si conoces uno o eres tú, publica GRATIS aquí 👇
+	<div id="cta-publicar" class="blz-cta-box text-center mt-4 mb-4">
+		<h5 class="blz-cta-title">
+			📢 Publica tu servicio y consigue clientes hoy
+		</h5>
+		<p class="blz-cta-text">
+			Es rápido, gratis y te ayudamos a crear tu anuncio.
 		</p>
-		<a href="formulario.html" class="btn btn-primary">
-			Publicar anuncio gratis
+		<a href="formulario.html" class="blz-cta-btn">
+			Publicar gratis ahora
 		</a>
 	</div>
 
 	<!--Overlay flotante-->
-	<div id="visor-full" class="visor-full">
+	<!--	<div id="visor-full" class="visor-full">
 		<div class="visor-header">
 			<span>Vista previa del anuncio</span>
 			<div>
@@ -169,8 +151,23 @@
 		</div>
 
 		<iframe id="visor-iframe" loading="lazy"></iframe>
-	</div>
+	</div>-->
 	<!--End Overlay flotante-->
+	<!-- FONDO OSCURO -->
+	<div id="blz-overlay-bg" class="blz-overlay-bg" onclick="cerrarSheet()"></div>
+
+	<!-- BOTTOM SHEET -->
+	<div id="blz-bottom-sheet" class="blz-bottom-sheet">
+		<div class="blz-sheet-header" id="dragHandle">
+			<div class="blz-drag-bar"></div>
+			<div class="blz-header-content">
+				<button class="blz-close-btn" onclick="cerrarSheet()">✕</button>
+			</div>
+		</div>
+		<div class="blz-sheet-body" id="blz-sheet-content">
+			<!-- aquí se inyecta contenido -->
+		</div>
+	</div>
 
 
 	<footer class="site-footer">
@@ -178,7 +175,7 @@
 			<div class="row">
 
 				<div class="col-12 text-center">
-<p class="blz-footer-links">
+					<p class="blz-footer-links">
 						<a href="javascript:void(0)" onclick="abrirTerms()">Términos y Condiciones</a>
 					</p>
 					<p>
@@ -189,7 +186,7 @@
 					</p>
 
 					<!-- LINKS LEGALES -->
-					
+
 				</div>
 
 			</div>

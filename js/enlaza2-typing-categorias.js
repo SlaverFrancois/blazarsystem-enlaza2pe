@@ -1,10 +1,10 @@
 const palabras = [
-  "Electricistas",
-  "Gasfiteros",
-  "Pintores",
-  "Albañiles",
-  "Técnicos",
-  "Drywalleros"
+  "Electricista",
+  "Gasfitero",
+  "Pintor",
+  "Albañil",
+  "Técnico",
+  "Drywallero"
 ];
 
 let i = 0;      // palabra

@@ -13,20 +13,13 @@ fetch("json/categorias-menu.json")
 
       grupo.subcategory.forEach(item => {
         const subLi = document.createElement("li");
-        //subLi.textContent = item;
 
-        /*inicio nuevo*/
-        subLi.textContent = item;
-        subLi.setAttribute("data-subcategoria", item);
-        /*fin nuevo*/
+        const link = document.createElement("a");
+        link.textContent = item;
+        link.href = "javascript:void(0)";
+        link.setAttribute("data-subcategoria", item);
 
-        subLi.style.cursor = "pointer";
-
-        /*
-        subLi.onclick = () => {
-          console.log("Seleccionaste:", item);
-        };*/
-
+        subLi.appendChild(link);
         subUl.appendChild(subLi);
       });
 
@@ -38,16 +31,27 @@ fetch("json/categorias-menu.json")
   .catch(error => console.error("Error cargando JSON:", error));
 
 
-  /*LISTENER GLOBAL - FUNCION DE SELECCIONAR CATEGORIA Y MOSTRAR RESULTADOS*/
-  document.addEventListener("click", function(e) {
+/*LISTENER GLOBAL - FUNCION DE SELECCIONAR CATEGORIA Y MOSTRAR RESULTADOS*/
+document.addEventListener("click", function (e) {
   const target = e.target;
 
   if (target.dataset.subcategoria) {
     const item = target.dataset.subcategoria;
 
-    document.getElementById("search").value = item;
+    // 🔥 mostrar título claro
+    const titulo = document.getElementById("titulo-resultados");
+    titulo.textContent = "Resultados para: " + item;
+    titulo.style.display = "block";
+
+    //document.getElementById("search").value = item;
 
     filtrarAnuncios(item, "subcategoria");
+
+    // ✅ dejar input limpio y listo para buscar otra cosa
+    const input = document.getElementById("search");
+    input.value = "";
+    input.blur(); // opcional: quita foco (mejor UX en mobile)
+
 
     // cerrar menú mobile automáticamente
     document.querySelector(".js-menu-toggle")?.click();

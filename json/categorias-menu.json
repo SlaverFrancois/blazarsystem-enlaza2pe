@@ -2,6 +2,7 @@
   {
     "categoria": "Servicios del Hogar y construcción",
     "subcategory": [
+      "Servicios domésticos/Niñeras",
       "Electricista",
       "Gasfitero",
       "Albañil",
@@ -69,8 +70,7 @@
       "Enfermero",
       "Psicólogo",
       "Policlínico",
-      "Laboratorio",
-      "Cuidadoras"
+      "Laboratorio"
     ]
   },
   {

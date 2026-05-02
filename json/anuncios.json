@@ -26,7 +26,7 @@
       "img/id1/foto2.jpg",
       "img/id1/foto1.jpg"
     ],
-  "tipoanuncio": 1
+  "tipoanuncio": 2
   },
 
 
@@ -46,13 +46,13 @@
   "featured": false, 
   "perfil": "img/id1/persona.jpg",
   "titulo": "Profesora en reynoso",
-  "descripcion": "Experiencia en pegagogiam psicologia, soy amauta",
+  "descripcion": "Experiencia en pegagogiam psicologia, no mas pobresh en un paish ricu",
   "precio": "s/40 mensuales",
   "imagenes": [
       "img/id1/foto1.jpg",
       "img/id1/foto2.jpg"
     ],
-  "tipoanuncio": 1
+  "tipoanuncio": 2
   },
 
 
@@ -73,13 +73,13 @@
   "featured": false, 
   "perfil": "img/id1/persona.jpg",
   "titulo": "Profesora en reynoso",
-  "descripcion": "Experiencia en pegagogiam psicologia, soy amauta",
+  "descripcion": "Experiencia en pegagogiam psicologia, no mas pobresh en un paish ricu",
   "precio": "s/40 mensuales",
   "imagenes": [
       "img/id1/foto1.jpg",
       "img/id1/foto2.jpg"
     ],
-  "tipoanuncio": 1
+  "tipoanuncio": 2
   },
 
 
@@ -100,7 +100,7 @@
   "featured": false, 
   "perfil": "img/id1/persona.jpg",
   "titulo": "Profesora en reynoso",
-  "descripcion": "Experiencia en pegagogiam psicologia, soy amauta",
+  "descripcion": "Experiencia en pegagogiam psicologia, no mas pobresh en un paish ricu",
   "precio": "s/40 mensuales",
   "imagenes": [
       "img/id1/foto1.jpg",
@@ -126,7 +126,7 @@
   "featured": false, 
   "perfil": "img/id1/persona.jpg",
   "titulo": "Profesora en reynoso",
-  "descripcion": "Experiencia en pegagogiam psicologia, soy amauta",
+  "descripcion": "Experiencia en pegagogiam psicologia, no mas pobresh en un paish ricu",
   "precio": "s/40 mensuales",
   "imagenes": [
       "img/id1/foto1.jpg",
@@ -152,238 +152,12 @@
   "featured": false, 
   "perfil": "img/id1/persona.jpg",
   "titulo": "Profesora en reynoso",
-  "descripcion": "Experiencia en pegagogiam psicologia, soy amauta",
+  "descripcion": "Experiencia en pegagogiam psicologia, no mas pobresh en un paish ricu",
   "precio": "s/40 mensuales",
   "imagenes": [
       "img/id1/foto1.jpg",
       "img/id1/foto2.jpg"
     ],
   "tipoanuncio": 2
-  },
-
-  {
-  "idanuncio": 7,
-  "creado": "publicado el 13/01/2026",
-  "representante": "Gaby del solar",
-  "rubro": "Educación",
-  "subcategory": "Profesor",
-  "especiality": "Inicial",
-  "skills": [
-    "Pedagogia",
-    "Psicologa",
-    "Amauta"
-  ], 
-  "web": "https://slaverfrancois.github.io/blazarsystem-enlaza2pe-users/marta-lopez-45672134.html",
-  "featured": false, 
-  "perfil": "img/id1/persona.jpg",
-  "titulo": "Profesora en reynoso",
-  "descripcion": "Experiencia en pegagogiam psicologia, soy amauta",
-  "precio": "s/40 mensuales",
-  "imagenes": [
-      "img/id1/foto1.jpg",
-      "img/id1/foto2.jpg"
-    ],
-  "tipoanuncio": 3
-  },
-
-    {
-  "idanuncio": 8,
-  "creado": "publicado el 13/01/2026",
-  "representante": "Gaby del solar",
-  "rubro": "Educación",
-  "subcategory": "Profesor",
-  "especiality": "Inicial",
-  "skills": [
-    "Pedagogia",
-    "Psicologa",
-    "Amauta"
-  ], 
-  "web": "https://slaverfrancois.github.io/blazarsystem-enlaza2pe-users/marta-lopez-45672134.html",
-  "featured": false, 
-  "perfil": "img/id1/persona.jpg",
-  "titulo": "Profesora en dulanto",
-  "descripcion": "Experiencia en pegagogiam psicologia, soy amauta",
-  "precio": "s/40 mensuales",
-  "imagenes": [
-      "img/id1/foto1.jpg",
-      "img/id1/foto2.jpg"
-    ],
-  "tipoanuncio": 3
-  },
-
-      {
-  "idanuncio": 9,
-  "creado": "publicado el 13/01/2026",
-  "representante": "Gaby del solar",
-  "rubro": "Educación",
-  "subcategory": "Profesor",
-  "especiality": "Inicial",
-  "skills": [
-    "Pedagogia",
-    "Psicologa",
-    "Amauta"
-  ], 
-  "web": "https://slaverfrancois.github.io/blazarsystem-enlaza2pe-users/marta-lopez-45672134.html",
-  "featured": false, 
-  "perfil": "img/id1/persona.jpg",
-  "titulo": "Profesora en 200 millas",
-  "descripcion": "Experiencia en pegagogiam psicologia, soy amauta",
-  "precio": "s/40 mensuales",
-  "imagenes": [
-      "img/id1/foto1.jpg",
-      "img/id1/foto2.jpg"
-    ],
-  "tipoanuncio": 3
-  },
-
-  {
-  "idanuncio": 10,
-  "creado": "publicado el 13/01/2026",
-  "representante": "Gaby del solar",
-  "rubro": "Educación",
-  "subcategory": "Profesor",
-  "especiality": "Inicial",
-  "skills": [
-    "Pedagogia",
-    "Psicologa",
-    "Amauta"
-  ], 
-  "web": "https://slaverfrancois.github.io/blazarsystem-enlaza2pe-users/marta-lopez-45672134.html",
-  "featured": true, 
-  "perfil": "img/id1/persona.jpg",
-  "titulo": "Profesora en chile",
-  "descripcion": "Experiencia en pegagogiam psicologia, soy amauta",
-  "precio": "s/40 mensuales",
-  "imagenes": [
-      "img/id1/foto1.jpg",
-      "img/id1/foto2.jpg"
-    ],
-  "tipoanuncio": 4
-  },
-
-    {
-  "idanuncio": 11,
-  "creado": "publicado el 13/01/2026",
-  "representante": "Gaby del solar",
-  "rubro": "Educación",
-  "subcategory": "Profesor",
-  "especiality": "Inicial",
-  "skills": [
-    "Pedagogia",
-    "Psicologa",
-    "Amauta"
-  ], 
-  "web": "https://slaverfrancois.github.io/blazarsystem-enlaza2pe-users/marta-lopez-45672134.html",
-  "featured": true, 
-  "perfil": "img/id1/persona.jpg",
-  "titulo": "Profesora en argentina",
-  "descripcion": "Experiencia en pegagogiam psicologia, soy amauta",
-  "precio": "s/40 mensuales",
-  "imagenes": [
-      "img/id1/foto1.jpg",
-      "img/id1/foto2.jpg"
-    ],
-  "tipoanuncio": 4
-  },
-
-  {
-  "idanuncio": 12,
-  "creado": "publicado el 13/01/2026",
-  "representante": "Gaby del solar",
-  "rubro": "Educación",
-  "subcategory": "Profesor",
-  "especiality": "Inicial",
-  "skills": [
-    "Pedagogia",
-    "Psicologa",
-    "Amauta"
-  ], 
-  "web": "https://slaverfrancois.github.io/blazarsystem-enlaza2pe-users/marta-lopez-45672134.html",
-  "featured": true, 
-  "perfil": "img/id1/persona.jpg",
-  "titulo": "Profesora en brasil",
-  "descripcion": "Experiencia en pegagogiam psicologia, soy amauta",
-  "precio": "s/40 mensuales",
-  "imagenes": [
-      "img/id1/foto1.jpg",
-      "img/id1/foto2.jpg"
-    ],
-  "tipoanuncio": 4
-  },
-
-
-  {
-  "idanuncio": 13,
-  "creado": "publicado el 13/01/2026",
-  "representante": "Gaby del solar",
-  "rubro": "Educación",
-  "subcategory": "Profesor",
-  "especiality": "Inicial",
-  "skills": [
-    "Pedagogia",
-    "Psicologa",
-    "Amauta"
-  ], 
-  "web": "https://slaverfrancois.github.io/blazarsystem-enlaza2pe-users/marta-lopez-45672134.html",
-  "featured": true, 
-  "perfil": "img/id1/persona.jpg",
-  "titulo": "Profesora en la punta",
-  "descripcion": "Experiencia en pegagogiam psicologia, soy amauta",
-  "precio": "s/40 mensuales",
-  "imagenes": [
-      "img/id1/foto1.jpg",
-      "img/id1/foto2.jpg"
-    ],
-  "tipoanuncio": 5
-  },
-
-    {
-  "idanuncio": 14,
-  "creado": "publicado el 13/01/2026",
-  "representante": "Gaby del solar",
-  "rubro": "Educación",
-  "subcategory": "Profesor",
-  "especiality": "Inicial",
-  "skills": [
-    "Pedagogia",
-    "Psicologa",
-    "Amauta"
-  ], 
-  "web": "https://slaverfrancois.github.io/blazarsystem-enlaza2pe-users/marta-lopez-45672134.html",
-  "featured": true, 
-  "perfil": "img/id1/persona.jpg",
-  "titulo": "Profesora en ventanilla",
-  "descripcion": "Experiencia en pegagogiam psicologia, soy amauta",
-  "precio": "s/40 mensuales",
-  "imagenes": [
-      "img/id1/foto1.jpg",
-      "img/id1/foto2.jpg"
-    ],
-  "tipoanuncio": 5
-  },
-
-    {
-  "idanuncio": 15,
-  "creado": "publicado el 13/01/2026",
-  "representante": "Gaby del solar",
-  "rubro": "Educación",
-  "subcategory": "Profesor",
-  "especiality": "Inicial",
-  "skills": [
-    "Pedagogia",
-    "Psicologa",
-    "Amauta"
-  ], 
-  "web": "https://slaverfrancois.github.io/blazarsystem-enlaza2pe-users/marta-lopez-45672134.html",
-  "featured": true, 
-  "perfil": "img/id1/persona.jpg",
-  "titulo": "Profesora en cieneguilla",
-  "descripcion": "Experiencia en pegagogiam psicologia, soy amauta",
-  "precio": "s/40 mensuales",
-  "imagenes": [
-      "img/id1/foto1.jpg",
-      "img/id1/foto2.jpg"
-    ],
-  "tipoanuncio": 5
   }
 ]

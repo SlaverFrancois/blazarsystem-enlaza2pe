@@ -28,7 +28,7 @@
 	<link rel="stylesheet" href="css/flatpickr.min.css">
 
 
-	<title>Blogy &mdash; Free Bootstrap 5 Website Template by Untree.co</title>
+	<title>enlaza2.pe &mdash; Directorio de servicios carmelinos</title>
 </head>
 
 <body>
@@ -46,22 +46,18 @@
 		<div class="container">
 			<div class="menu-bg-wrap">
 				<div class="site-navigation">
-					<div class="row g-0 align-items-center">
-						<div class="col-2">
-							<a href="index.html" class="logo m-0 float-start"><a href="index.html"
-									class="logo m-0 float-start">
+					<div class="row align-items-center">
+						<div class="col-6">
+							<a href="index.html" class="logo m-0">
+								<!-- Desktop -->
+								<span class="logo-desktop">Enlaza2.pe</span>
 
-									<!-- Desktop -->
-									<span class="logo-desktop">Enlaza2.pe</span>
-
-									<!-- Mobile -->
-									<marquee class="logo-mobile" behavior="scroll" direction="left" scrollamount="3">
-										Enlaza2.pe
-									</marquee>
-
-								</a>
+								<!-- Mobile -->
+								<div class="logo-mobile">
+									Enlaza2.pe
+								</div>
 							</a>
-						</div> 
+						</div>
 					</div>
 				</div>
 			</div>
@@ -114,53 +110,68 @@
 				<div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
 					<form id="formAnuncio">
 						<!--paso 1-->
-						<div id="step1">
-							<div class="row border-bottom">
-								<div class="col-lg-6 col-md-12 col-sm-12 mb-3">
-									<input type="text" class="form-control" placeholder="Nombre" required>
-								</div>
-								<div class="col-lg-6 col-md-12 col-sm-12 mb-3">
-									<input type="tel" class="form-control" placeholder="Teléfono o Correo" required>
-								</div>
-								<div class="col-lg-6 col-md-12 col-sm-12 mb-3">
-									<input type="text" class="form-control" placeholder="Dirección fija o aproximada"
-										required>
-								</div>
-								<div class="col-lg-6 col-md-12 col-sm-12 mb-3">
-									<input type="text" class="form-control"
-										placeholder="Categoría de servicios (Ej: gasfitería, electricidad)" required>
-								</div>
-								<div class="col-12 mb-3">
-									<textarea cols="30" rows="6" class="form-control"
-										placeholder="¿Qué trabajos realizas?. Ej: arreglo fugas, hago instalaciones electricas, instalo drywall, hago limpieza, cuidado de personas, etc."
-										required></textarea>
-								</div>
-								<!-- BLOQUE LEGAL -->
-								<div class="col-lg-12 mb-4 blz-form-legal">
-									<ul class="blz-form-list">
-										<li>Tu información es privada y no se comparte con terceros.</li>
-										<li>Tu solicitud será evaluada antes de ser publicada.</li>
-										<li>Te contactaremos por WhatsApp para refinar tu anuncio.</li>
-									</ul>
-									<div class="blz-form-check">
-										<input type="checkbox" id="acceptTerms" required>
-										<label for="acceptTerms">
-											Acepto la publicación de mis datos conforme a los términos de enlaza2.pe
-										</label>
-									</div>
-									<div class="blz-form-link">
-										<a href="javascript:void(0)" onclick="abrirYIrANormas()">
-											Leer términos y políticas (ir a normas de contenido)
-										</a>
-									</div>
-								</div>
-								<div class="col-lg-12 mt-3">
-									<button type="submit" class="btn btn-primary w-100">
-										Publicar anuncio
-									</button>
-								</div>
-							</div>
-						</div>
+						 <div id="step1">
+      <div class="row border-bottom">
+
+        <!-- NOMBRE -->
+        <div class="col-lg-6 col-md-12 mb-3">
+          <label class="blz-label">👤 Su nombre</label>
+          <input type="text" class="form-control" required>
+        </div>
+
+        <!-- TELÉFONO -->
+        <div class="col-lg-6 col-md-12 mb-3">
+          <label class="blz-label">📞 Su teléfono</label>
+          <input type="tel" class="form-control" required>
+        </div>
+
+        <!-- DIRECCIÓN -->
+        <div class="col-lg-12 col-md-12 mb-3">
+          <label class="blz-label">📍 Zona o dirección</label>
+          <input type="text" class="form-control" required>
+        </div>
+
+        <!-- SERVICIO -->
+        <div class="col-12 mb-3">
+          <label class="blz-label">🛠️ ¿Qué trabajos realiza?</label>
+          <textarea cols="30" rows="3" class="form-control" required></textarea>
+
+          <!-- AYUDA VISUAL -->
+          <small class="blz-help">
+            Ejemplo: arreglo fugas, instalaciones eléctricas, drywall, limpieza, cuidado de personas
+          </small>
+        </div>
+
+        <!-- BLOQUE LEGAL -->
+        <div class="col-lg-12 mb-4 blz-form-legal">
+          <ul class="blz-form-list">
+            <li>Tu información es privada y no se comparte con terceros.</li>
+            <li>Tu solicitud será evaluada antes de ser publicada.</li>
+            <li>Te contactaremos por WhatsApp para ayudarte.</li>
+          </ul>
+
+          <div class="blz-form-check">
+            <input type="checkbox" id="acceptTerms" required>
+            <label for="acceptTerms">
+              Acepto la publicación de mis datos
+            </label>
+          </div>
+
+          <div class="blz-form-link">
+            <a href="javascript:void(0)" onclick="abrirYIrANormas()">
+              Ver reglas de publicación
+            </a>
+          </div>
+        </div>
+
+        <div class="col-lg-12 mt-3">
+          <button type="submit" class="btn btn-primary w-100">
+            Publicar anuncio
+          </button>
+        </div>
+
+      </div>
+    </div>
 						<!--fin paso 1-->
 
 						<!--paso 2-->
