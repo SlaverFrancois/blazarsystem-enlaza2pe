@@ -231,24 +231,6 @@ input.addEventListener("focus", () => {
 });
 
 /*mini buscador*/
-/*
-function irABuscador() {
-  const input = document.getElementById("search");
-
-  if (!input) return;
-
-  // scroll suave hacia el buscador
-  input.scrollIntoView({
-    behavior: "smooth",
-    block: "center"
-  });
-
-  // esperar a que llegue y activar teclado
-  setTimeout(() => {
-    input.focus();
-  }, 400);
-}*/
-
 function irABuscador() {
   const input = document.getElementById("search");
   if (!input) return;
@@ -265,3 +247,37 @@ function irABuscador() {
     block: "center"
   });
 }
+
+let menuAbierto = false;
+
+function abrirCategorias() {
+  if (menuAbierto) return; // 🔥 evita duplicados
+
+  document.body.classList.add("offcanvas-menu");
+  menuAbierto = true;
+
+  // 🔥 agregar estado SOLO UNA VEZ
+  history.pushState({ menu: true }, "");
+}
+
+/* cerrar menú */
+function cerrarCategorias() {
+  if (!menuAbierto) return;
+
+  document.body.classList.remove("offcanvas-menu");
+  menuAbierto = false;
+
+  // 🔥 regresar en el historial SOLO si corresponde
+  if (history.state && history.state.menu) {
+    history.back();
+  }
+}
+
+/* botón ATRÁS del navegador */
+window.addEventListener("popstate", function (event) {
+
+  if (menuAbierto) {
+    document.body.classList.remove("offcanvas-menu");
+    menuAbierto = false;
+  }
+});
