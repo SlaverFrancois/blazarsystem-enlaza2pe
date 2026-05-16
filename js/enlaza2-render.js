@@ -26,11 +26,11 @@ function diseño1(a) {
         <img src="${a.imagenes?.[0] || 'img/default/diseno1-3.jpg'}" class="img-fluid">
       </a>
       <div>
-        <span class="date">${a.rubro} &bullet; ${a.subcategory}</span>
+      <!--  <span class="date">${a.rubro} &bullet; ${a.subcategory}</span> -->
         <h2><a href="javascript:void(0)" onclick="abrirVista('${a.web}')">${a.titulo}</a></h2>
         <span class="d-inline-block mt-1"><a href="javascript:void(0)" onclick="abrirVista('${a.web}')">${a.representante}</a></span>
         <p>${a.descripcion}</p>
-        <p><a href="javascript:void(0)" onclick="abrirVista('${a.web}')" class="btn btn-sm btn-outline-primary">VER MÁS DETALLES</a></p>
+        <p><a href="javascript:void(0)" onclick="abrirVista('${a.web}')" class="btn btn-sm btn-primary">VER MÁS DETALLES</a></p>
       </div>
     </div>`;
 }
@@ -47,7 +47,7 @@ function diseño2(a) {
         <div class="post-entry-alt">
          <div class="excerpt">
           
-          <span class="date">${a.rubro} &bullet; ${a.subcategory}</span>
+          <!--  <span class="date">${a.rubro} &bullet; ${a.subcategory}</span> -->
           <h2><a href="javascript:void(0)" onclick="abrirVista('${a.web}')">${a.titulo}</a></h2>
           
           <div class="post-meta align-items-center text-left clearfix">
@@ -57,7 +57,7 @@ function diseño2(a) {
           </div>
                 
           <p>${a.descripcion}</p>
-          <p><a href="javascript:void(0)" onclick="abrirVista('${a.web}')" class="btn btn-sm btn-outline-primary">VER MÁS DETALLES</a></p>
+          <p><a href="javascript:void(0)" onclick="abrirVista('${a.web}')" class="btn btn-sm btn-primary">VER MÁS DETALLES</a></p>
         </div>
       </div>
 	  </div>`;

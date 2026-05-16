@@ -2,7 +2,7 @@
   {
     "categoria": "Servicios del Hogar y construcción",
     "subcategory": [
-      "Servicios domésticos/Niñeras",
+      "Servicios domésticos",
       "Electricista",
       "Gasfitero",
       "Albañil",
@@ -10,7 +10,7 @@
       "Carpintero",
       "Soldador",
       "Cerrajero",
-      "Drywall",
+      "Drywalleros",
       "Jardinero",
       "Limpieza",
       "Mudanza",
@@ -46,10 +46,10 @@
   {
     "categoria": "Inmobiliaria y Clasificados",
     "subcategory": [
-      "Alquileres",
+      "Se alquila",
       "Se vende",
       "Te Compro",
-      "Búsqueda-Recompensas"
+      "Se Busca - Recompensa"
     ]
   },
     {
@@ -103,7 +103,8 @@
     "categoria": "Mascotas",
     "subcategory": [
       "Veterinario",
-      "Paseador de perros"
+      "Paseador de perros",
+      "Mascotas perdidas"
     ]
   }
 ]

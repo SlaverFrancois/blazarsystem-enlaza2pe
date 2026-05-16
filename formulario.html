@@ -68,110 +68,81 @@
 	<section class="section mt-5 mb-5">
 		<div class="container">
 			<div class="row">
-
-				<div class="col-lg-4 mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
-
-					<div class="blz-anunciante-box sec-features p-3">
-
-						<h4 class="blz-anunciante-title text-center">
-							📢 Publica tu servicio gratis y consigue más clientes
-						</h4>
-
-						<p class="blz-anunciante-sub">
-							Completa tus datos y nosotros te ayudamos a publicar tu anuncio.
-							En menos de 24 horas ya podrás aparecer en la plataforma.
-						</p>
-
-						<ul class="blz-anunciante-list">
-							<li>Escribe qué trabajos haces (ej: arreglos, instalaciones, etc).</li>
-							<li>Indica en qué zona trabajas.</li>
-							<li>No pongas cosas que no puedes demostrar.</li>
-							<li>Cuenta tu experiencia o trabajos que ya hiciste.</li>
-						</ul>
-
-						<div class="blz-anunciante-warning">
-							⚠️ Si la información está incompleta o es falsa, no se publicará.
-						</div>
-
-						<div class="blz-anunciante-link text-center">
-							<a href="javascript:void(0)" onclick="abrirYIrANormas()">
-								Ver reglas antes de publicar
-							</a>
-						</div>
-
-						<div class="blz-anunciante-extra">
-							💡 Mientras más claro escribas, más clientes te llamarán.
-						</div>
-
-					</div>
-				</div>
-
-				<!-- FORMULARIO -->
-				<div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+								<!-- FORMULARIO -->
+				<div class="col-lg-12" data-aos="fade-up" data-aos-delay="200">
 					<form id="formAnuncio">
 						<!--paso 1-->
-						 <div id="step1">
-      <div class="row border-bottom">
+						<div id="step1">
+							<div class="row border-bottom">
 
-        <!-- NOMBRE -->
-        <div class="col-lg-6 col-md-12 mb-3">
-          <label class="blz-label">👤 Su nombre</label>
-          <input type="text" class="form-control" required>
-        </div>
+								<!-- NOMBRE -->
+								<div class="col-lg-6 col-md-12 mb-3">
+									<label class="blz-label">👤 Su nombre</label>
+									<small class="blz-help">
+										<em>Ejemplo: Maestro Juan Lozano</em>
+									</small>
+									<input type="text" class="form-control" id="nombre" required>
+								</div>
 
-        <!-- TELÉFONO -->
-        <div class="col-lg-6 col-md-12 mb-3">
-          <label class="blz-label">📞 Su teléfono</label>
-          <input type="tel" class="form-control" required>
-        </div>
+								<!-- TELÉFONO -->
+								<div class="col-lg-6 col-md-12 mb-3">
+									<label class="blz-label">📞 Su teléfono</label>
+									<small class="blz-help">
+										<em>Para brindarte apoyo y ofrecerte la mejor oferta</em>
+									</small>
+									<input type="tel" class="form-control" id="telefono" required>
+								</div>
 
-        <!-- DIRECCIÓN -->
-        <div class="col-lg-12 col-md-12 mb-3">
-          <label class="blz-label">📍 Zona o dirección</label>
-          <input type="text" class="form-control" required>
-        </div>
+								<!-- DIRECCIÓN -->
+								<div class="col-lg-12 col-md-12 mb-3">
+									<label class="blz-label">📍 Ubicación exacta o aproximada</label>
+									<small class="blz-help">
+										<em>Ejemplo: Mi trabajo es a domicilio (Sólo Reynoso y Dulanto)</em>
+									</small>
 
-        <!-- SERVICIO -->
-        <div class="col-12 mb-3">
-          <label class="blz-label">🛠️ ¿Qué trabajos realiza?</label>
-          <textarea cols="30" rows="3" class="form-control" required></textarea>
+									<small class="blz-help">
+										<em>Ejemplo: Mi local/taller está en av 1° de mayo 1817</em>
+									</small>
 
-          <!-- AYUDA VISUAL -->
-          <small class="blz-help">
-            Ejemplo: arreglo fugas, instalaciones eléctricas, drywall, limpieza, cuidado de personas
-          </small>
-        </div>
+									<input type="text" class="form-control" id="direccionzona" required>
+								</div>
 
-        <!-- BLOQUE LEGAL -->
-        <div class="col-lg-12 mb-4 blz-form-legal">
-          <ul class="blz-form-list">
-            <li>Tu información es privada y no se comparte con terceros.</li>
-            <li>Tu solicitud será evaluada antes de ser publicada.</li>
-            <li>Te contactaremos por WhatsApp para ayudarte.</li>
-          </ul>
+								<!-- SERVICIO -->
+								<div class="col-12 mb-3">
+									<label class="blz-label">🛠️ ¿Qué trabajos realiza?:</label>
+									<!-- AYUDA VISUAL -->
+									<small class="blz-help">
+										<em>Describir con veracidad. Ejemplos: arreglo fugas, instalaciones eléctricas,
+											instalo drywall, hago limpieza, cuidado de
+											personas mayores.</em>
+									</small>
+									<textarea cols="30" rows="3" class="form-control" id="trabajos" required></textarea>
+								</div>
 
-          <div class="blz-form-check">
-            <input type="checkbox" id="acceptTerms" required>
-            <label for="acceptTerms">
-              Acepto la publicación de mis datos
-            </label>
-          </div>
+								<!-- BLOQUE LEGAL -->
+								<div class="col-lg-12 mb-4 blz-form-legal">
+									<ul class="blz-form-list">
+										<li>Tu información es privada y no se comparte con terceros.</li>
+										<li>Tu solicitud será evaluada antes de ser publicada.</li>
+										<li>Te contactaremos por WhatsApp para ayudarte a publicar tu anuncio en menos de 24 horas.</li>
+									</ul>
 
-          <div class="blz-form-link">
-            <a href="javascript:void(0)" onclick="abrirYIrANormas()">
-              Ver reglas de publicación
-            </a>
-          </div>
-        </div>
+									<div class="blz-form-link">
+										Al enviar la información, acepta nuestras reglas de publicación
+										<a href="javascript:void(0)" onclick="abrirYIrANormas()">
+											Leer nuestras normas
+										</a>
+									</div>
+								</div>
 
-        <div class="col-lg-12 mt-3">
-          <button type="submit" class="btn btn-primary w-100">
-            Publicar anuncio
-          </button>
-        </div>
+								<div class="col-lg-12 mt-3">
+									<button type="submit" class="btn btn-primary w-100">
+										Enviar información para publicar
+									</button>
+								</div>
 
-      </div>
-    </div>
+							</div>
+						</div>
 						<!--fin paso 1-->
 
 						<!--paso 2-->
@@ -259,59 +230,96 @@
 		</div>
 	</div>
 
-	<!--
+
+	<!-- 🔥 SOBRE ENLAZA2.PE -->
 	<div class="section">
 		<div class="container">
-			<div class="row justify-content-between">
+
+			<div class="row justify-content-between align-items-center">
+
+				<!-- IMAGEN -->
 				<div class="col-lg-7 mb-4 mb-lg-0">
-					<img src="images/img_7_sq.jpg" alt="Image" class="img-fluid rounded
-					">
+					<img src="images/comunidad-carmen.jpg" alt="Enlaza2.pe Carmen de la Legua"
+						class="img-fluid rounded shadow-sm">
 				</div>
-				<div class="col-lg-4 ps-lg-2">
-					<div class="mb-5">
-						<h2 class="text-black h4">Publishing platform for professional bloggers</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-							there live the blind texts.</p>
+
+				<!-- TEXTO -->
+				<div class="col-lg-4 ps-lg-4">
+
+					<div class="mb-4">
+						<h2 class="text-black h3">
+							¿Qué es enlaza2.pe?
+						</h2>
+
+						<p class="text-muted">
+							enlaza2.pe es una plataforma digital de clasificados locales creada para enlazar
+							a los vecinos de Carmen de la Legua con servicios, negocios,
+							emprendedores y oportunidades cerca de su propia comunidad.
+						</p>
+
+						<p class="text-muted">
+							Aquí puede encontrar técnicos, profesionales, comida, salud,
+							servicios para el hogar, anuncios y mucho más,
+							organizados por categorías para facilitar la búsqueda.
+						</p>
 					</div>
+
+					<!-- ITEM -->
 					<div class="d-flex mb-3 service-alt">
 						<div>
-							<span class="bi-wallet-fill me-4"></span>
+							<span class="bi-search me-4 fs-4 text-primary"></span>
 						</div>
+
 						<div>
-							<h3>Building your blog</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-								there live the blind texts.</p>
+							<h3 class="h6">Búsqueda rápida y organizada</h3>
+
+							<p>
+								Explore anuncios clasificados por categorías como hogar,
+								salud, comida, profesionales y servicios técnicos.
+							</p>
 						</div>
 					</div>
 
+					<!-- ITEM -->
 					<div class="d-flex mb-3 service-alt">
 						<div>
-							<span class="bi-pie-chart-fill me-4"></span>
+							<span class="bi-geo-alt-fill me-4 fs-4 text-success"></span>
 						</div>
+
 						<div>
-							<h3>Resources and insights</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-								there live the blind texts.</p>
+							<h3 class="h6">Enfoque hiperlocal</h3>
+
+							<p>
+								Impulsamos los servicios y emprendimientos de Carmen de la Legua,
+								acercando soluciones reales a los vecinos del distrito.
+							</p>
 						</div>
 					</div>
 
+					<!-- ITEM -->
 					<div class="d-flex mb-3 service-alt">
 						<div>
-							<span class="bi-bag-check-fill me-4"></span>
+							<span class="bi-megaphone-fill me-4 fs-4 text-warning"></span>
 						</div>
+
 						<div>
-							<h3>Blog just for you</h3>
-							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-								there live the blind texts.</p>
+							<h3 class="h6">Publica tus servicios fácilmente</h3>
+
+							<p>
+								Cualquier vecino, técnico o emprendedor puede solicitar la publicación
+								de sus anuncios para llegar a más personas de su comunidad.
+							</p>
 						</div>
 					</div>
 
 				</div>
 
 			</div>
+
 		</div>
 	</div>
--->
+
+
 	<footer class="site-footer">
 		<div class="container">
 			<div class="row">
@@ -367,7 +375,7 @@
 	<script src="js/custom.js"></script>
 	<script src="js/enlaza2-blz-terms.js"></script>
 	<script src="js/enlaza2-multistep-form.js"></script>
-
+	<script src="js/enlaza2-formulario.js"></script>
 
 </body>
 

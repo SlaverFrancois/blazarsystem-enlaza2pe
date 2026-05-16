@@ -53,7 +53,7 @@
 			<div class="menu-bg-wrap">
 				<div class="site-navigation">
 					<div class="row align-items-center">
-						<div class="col-6">
+						<div class="col-6 d-flex align-items-center">
 							<a href="index.html" class="logo m-0">
 								<!-- Desktop -->
 								<span class="logo-desktop">Enlaza2.pe</span>
@@ -63,11 +63,17 @@
 									Enlaza2.pe
 								</div>
 							</a>
+
+							<!--COMPARTIR-->
+							<button class="blz-share-btn" onclick="compartirSitio()" type="button"
+								aria-label="Compartir">
+								<i class="bi bi-share-fill"></i>
+							</button>
 						</div>
 
 						<!-- 🔍 BUSCADOR MINI -->
 						<div class="col-6 text-end">
-							<div class="blz-nav-search" onclick="irABuscador()">
+							<div class="blz-nav-search" id="miniBuscador" onclick="irABuscador()">
 								<span class="blz-nav-icon">🔍</span>
 								<span class="blz-nav-text">Buscar...</span>
 							</div>
@@ -84,50 +90,158 @@
 		<ul id="menu-categorias" class="js-clone-nav"></ul>
 	</div>
 
+	<!-- CONTENEDOR DESKTOP -->
 
-	<section class="site-typing mb-2">
+	<div class="col-md-12 d-md-flex mt-5">
+		<!--seccion de CTA (call to action) de busqueda-->
+		<section class="site-typing mt-5 mb-3 col-lg-8" id="cta-anuncio">
+			<div class="w-100">
+				<div class="blz-typing-card text-center">
+					<h5 class="blz-typing-title">
+						<span id="typing"></span> en Carmen de la Legua
+					</h5>
+					<p class="blz-typing-sub">
+						Describe lo que buscas ó busca por categoría.
+					</p>
+
+					<!--  BUSCADOR -->
+					<div class="blz-search-box">
+						<div class="blz-search-wrapper">
+							<input id="search" type="text" class="form-control"
+								placeholder='🔍︎  Escriba: "electricista"' />
+							<div id="suggestions" class="suggestions-box"></div>
+							<!--No usar <form> si no estás enviando nada-->
+						</div>
+					</div>
+
+					<div class="blz-carrusel-wrapper">
+						<span class="blz-carrusel-titulo"></span>
+						<div class="blz-carrusel-container">
+							<!-- BOTÓN SCROLL -->
+							<div id="carrusel-categorias" class="blz-carrusel"></div>
+							<!-- BOTÓN SCROLL -->
+							<div class="blz-carrusel-next" id="btnScroll">
+								<img class="js-menu-toggle" src="icons/abajo-caterogorias.png">
+							</div>
+							<!-- BOTON PREV-->
+							<div onclick="abrirCategorias()">
+								<div class="blz-coral js-menu-toggle">Ver Lista</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="mt-4 mb-4 col-lg-4" id="cta-anuncio">
+			<div class="w-100">
+				<div class="blz-cta-form-box">
+					<div class="blz-inline-layout">
+						<!-- TEXTO -->
+						<div class="blz-inline-copy">
+							<div class="blz-mini-title">
+								Los clientes necesitan de servicios
+							</div>
+							<div class="blz-mini-sub">
+								Muestrate aquí y enlázate con ellos
+							</div>
+						</div>
+						<!-- PASO 1 FORM-->
+						<div id="miniStep1" class="blz-inline-form">
+							<!-- COLUMNA IZQUIERDA -->
+							<div class="blz-fields">
+								<!-- SERVICIO -->
+								<div class="blz-field-wrap">
+									<textarea id="miniServicio" maxlength="350" class="form-control blz-servicio-box"
+										placeholder="✎ Tu oficio/servicio"></textarea>
+
+									<!--contador de caracteres-->
+									<div class="blz-counter">
+										<span id="countServicio">350</span>
+									</div>
+								</div>
+
+								<div class="blz-field-wrap">
+									<!--NOMBRE Y TELEFONO-->
+									<input type="text" maxlength="80" id="miniNombreTelefono"
+										class="form-control blz-datos-box" placeholder="✎ Tu teléfono o correo">
+									<!--INPUT DEL PENSAMIENTO GONZALO-->
+									<input type="text" id="gonzalo" name="website" autocomplete="off" tabindex="-1"
+										style="
+								position:absolute;
+								left:-9999px;
+								opacity:0;
+								height:0;
+								width:0;">
+
+									<!--contador de caracteres-->
+									<div class="blz-counter">
+										<span id="countDatos">80</span>
+									</div>
+								</div>
+							</div>
+							<button id="btnPublicarMini" class="btn blz-btn-publicar mt-3" type="button">
+								ENVIAR
+							</button>
+						</div>
+
+						<!-- STEP Final -->
+						<div id="miniStep2" style="display:none;">
+							<div class="blz-step-success">
+								<div class="blz-step-icon">
+									✅
+								</div>
+								<h5>
+									¡Solicitud enviada!
+								</h5>
+								<p>
+									Te contactaremos por WhatsApp para ayudarte
+									a publicar tu anuncio.
+								</p>
+							</div>
+						</div>
+					</div>
+		</section>
+	</div>
+
+	<h5 id="titulo-resultados" class="text-center mt-5 mb-4" style="display:none;"></h5>
+
+	<!-- NO RESULTS -->
+	<div id="blz-no-results" class="blz-no-results-box" style="display:none;">
+		<img src="images/no-results.jpg" alt="Sin resultados" class="blz-no-results-img">
+		<h3 class="blz-no-results-title">
+			No encontramos anuncios
+		</h3>
+		<p class="blz-no-results-text">
+			Intenta escribir otra palabra<br>
+			o publica tu servicio arriba.
+		</p>
+		<button type="button" class="blz-no-results-btn" onclick="irFormularioServicio()">
+			Publicar mi servicio
+		</button>
+	</div>
+
+
+	<!-- AQUÍ VA EL CTA-->
+	<!--
+	<section class="mt-4 mb-4" id="cta-anuncio">
 		<div class="container">
-			<div class="blz-typing-card text-center">
-				<h5 class="blz-typing-title">
-					<span id="typing"></span> en Carmen de la Legua
-				</h5>
-				<p class="blz-typing-sub">
-					Escribe lo que necesitas o elige "ver servicios" para encontrar todos los servicios cerca de ti.
-				</p>
-
-				<!-- 🔥 AQUÍ VA EL CTA -->
-				<div class="blz-cta-inline">
-					<div class="blz-cta-icon">📢</div>
-					<div class="blz-cta-content">
-						<div class="blz-cta-inline-title">
-							¿Ofreces algún servicio?
-						</div> 
+			<div class="blz-cta-inline">
+				<div class="blz-cta-icon">📢</div>
+				<div class="blz-cta-content">
+					<div class="blz-cta-inline-title" id="cta-texto">
+						¿Quieres anunciar un servicio?
 						<a href="formulario.html" class="blz-cta-inline-link">
-							👉Publicar ahora gratis aquí👈
+							👉Siií, deseo publicar!👈
 						</a>
 					</div>
-					<div class="blz-cta-close" onclick="this.parentElement.style.display='none'">✕</div>
 				</div>
-
-
-				<!--  BUSCADOR -->
-				<div class="blz-search-box">
-					<div class="blz-search-wrapper">
-						<input id="search" type="text" class="form-control"
-							placeholder='🔍︎  Escriba: "electricista"' />
-						<div id="suggestions" class="suggestions-box"></div>
-						<!--No usar <form> si no estás enviando nada-->
-					</div>
-
-					<button class="blz-search-btn js-menu-toggle" onclick="abrirCategorias()">
-						🧰 Ver servicios
-					</button>
-				</div>
+				<div class="blz-cta-close" onclick="this.parentElement.style.display='none'">✕</div>
 			</div>
 		</div>
 	</section>
+-->
 
-	<h5 id="titulo-resultados" class="text-center mt-5 mb-5" style="display:none;"></h5>
 
 	<div class="posts-entry posts-entry-sm">
 		<div class="container">
@@ -143,6 +257,10 @@
 		</div>
 	</div>
 	<!-- End contenedores dinamicos -->
+
+	<div class="mt-5 mb-5">
+
+	</div>
 
 	<!--Overlay flotante-->
 	<!--	<div id="visor-full" class="visor-full">
@@ -239,12 +357,14 @@
 
 	<script src="js/enlaza2-categorias-menu.js"></script>
 	<script src="js/enlaza2-typing-categorias.js"></script>
-	<script src="js/enlaza2-buscador.js"></script>
+
 	<script src="js/enlaza2-render.js"></script>
 	<script src="js/enlaza2-modal.js"></script>
 	<script src="js/enlaza2-visor.js"></script>
 	<script src="js/enlaza2-blz-terms.js"></script>
-
+	<script src="js/enlaza2-formulario.js"></script>
+	<script src="js/enlaza2-buscador.js"></script>
+	<script src="js/enlaza2-compartir.js"></script>
 </body>
 
 </html>
